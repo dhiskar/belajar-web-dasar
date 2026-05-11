@@ -66,10 +66,22 @@
         <li>Jago CSS</li>
         <li>Bisa JavaScript</li>
     </ul>
-    <input type="text" placeholder="Masukkan Nama Kamu">
-    <button onclick="alert('Selamat datang !')">Klik Saya</button>
-    <!-- ini adalah comment yang tidak terbaca  -->
+    <input type="text" id="itemName" placeholder="Masukkan Nama Kamu">
+    <button id="btnSimpan" onclick="tampilkanPesan()">Klik Saya</button>
+    <p id="pesanSapaan"></p>
 
 </body>
+<script>
+    // Ini adalah comment yang tidak terbaca
+    function tampilkanPesan() {
+        const nama = document.getElementById('itemName').value;
+
+        if (nama == "") {
+            alert("Nama tidak boleh kosong!");
+        } else {
+            document.getElementById('pesanSapaan').innerText = "Halo, " + nama + "! Selamat datang di dunia JavaScript!";
+        }
+    }
+</script>
 
 </html>
